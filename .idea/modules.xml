@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Searching_Algoritms.iml" filepath="$PROJECT_DIR$/.idea/Searching_Algoritms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linear_search/algorithms.iml" filepath="$PROJECT_DIR$/linear_search/algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Data_Structures.iml" filepath="$PROJECT_DIR$/.idea/Data_Structures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithms/algorithms.iml" filepath="$PROJECT_DIR$/algorithms/algorithms.iml" />
     </modules>
   </component>
 </project>
