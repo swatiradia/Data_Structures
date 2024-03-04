@@ -33,24 +33,24 @@ public class selection_sort {
         System.out.println();
     }
 
-    private static void selection_sort_maximum(int[] arr1) {
-        int maxIndex = 0;
-        int temp =0;
-
-        for (int i=arr1.length-1; i>=0;i--){
-            maxIndex=i;
-            for (int j=i-1; j>=0; j--){
-                if(arr1[maxIndex]<arr1[j])
-                    maxIndex =j;
-            }
-            temp = arr1[maxIndex];
-            arr1[maxIndex] = arr1[i];
-            arr1[i] = temp;
-
-            for (int values : arr1){
-                System.out.print( values + " ");
-            }
-            System.out.println();
-        }
-    }
+//    private static void selection_sort_maximum(int[] arr1) {
+//        int maxIndex = 0;
+//        int temp =0;
+//
+//        for (int i=arr1.length-1; i>=0;i--){
+//            maxIndex=i;
+//            for (int j=i-1; j>=0; j--){
+//                if(arr1[maxIndex]<arr1[j])
+//                    maxIndex =j;
+//            }
+//            temp = arr1[maxIndex];
+//            arr1[maxIndex] = arr1[i];
+//            arr1[i] = temp;
+//
+//            for (int values : arr1){
+//                System.out.print( values + " ");
+//            }
+//            System.out.println();
+//        }
+//    }
 }

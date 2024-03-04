@@ -1,5 +1,7 @@
 ### Linear Search
 
+The time complexity of Linear search is O(n).
+
 1. Start from the beginning of the list.
 2. Check each element one by one.
 3. If the current element is the one you're looking for, stop the search.
@@ -7,6 +9,8 @@
 5. Continue this process until you find the desired element or reach the end of the list.
 
 ### Binary Search
+
+The time complexity of Binary search is O(log n).
 
 1. Start with a sorted list of items.
 2. Look at the middle item of the list.
@@ -16,6 +20,8 @@
 6. Continue this process, narrowing down the search range each time, until you find the item or determine that it's not in the list.
 
 ### Binary Recursive Search
+
+The time complexity of Binary recursive search is O(log n).
 
 1. Start with a sorted list of items.
 2. Define a function that takes the list, the item to find, and the range to search within (initially, the entire list).

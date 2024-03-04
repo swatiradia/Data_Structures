@@ -3,7 +3,7 @@ package Sorting_Algorithms;
 public class quick_sort {
 
     public static void main(String[] args) {
-        int[] arr = {5, 6, 2, 3, 1, 8, 4};
+        int[] arr = {2, 6, 5, 3, 1, 8, 4};
 
         quickSort(arr, 0, arr.length-1);
 
