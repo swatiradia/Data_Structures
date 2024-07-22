@@ -13,9 +13,10 @@ public class Main {
         myLinkedList.appendList(3);
         myLinkedList.appendList(4);
         myLinkedList.appendList(5);
-//        myLinkedList.printList();
+        myLinkedList.printList();
+        myLinkedList.removeLast();
 
-        myLinkedList.reverse();
+
         myLinkedList.printList();
 //        myLinkedList.removeFirst();
 //        myLinkedList.printList();

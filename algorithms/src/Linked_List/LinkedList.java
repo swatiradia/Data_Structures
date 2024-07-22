@@ -47,7 +47,7 @@ public class LinkedList {
     public void appendList(int value){
 
         Node newNode = new Node(value);
-
+        //        When there are zero items in the LinkedList.
          if(length == 0){
              head = newNode;
              tail = newNode;
@@ -61,26 +61,30 @@ public class LinkedList {
 
 
     public Node removeLast(){
+        //        When there are zero items in the LinkedList.
          if(length == 0){System.out.println("LinkedList is empty");}
 
         Node temp = head;
         Node pre = head;
-        while(temp.next != null){
-            pre = temp;
-            temp = temp.next;
-        }
-        tail = pre;
-        tail.next= null;
-        length--;
-        if (length == 0){
+        //        When there is one item in the LinkedList.
+        if (length == 1){
             head = null;
             tail = null;
+        }else { //        When there are more items in the LinkedList.
+            while (temp.next != null) {
+                pre = temp;
+                temp = temp.next;
+            }
+            tail = pre;
+            tail.next = null;
         }
+        length--;
         return temp;
     }
 
     public void prepend(int value){
          Node newNode = new Node(value);
+        //        When there are zero items in the LinkedList.
         if(length == 0){
             head = newNode;
             tail = newNode;
