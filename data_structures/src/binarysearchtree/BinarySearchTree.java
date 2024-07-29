@@ -54,7 +54,7 @@ public class BinarySearchTree {
                     temp = temp.left;
                 }
             // When the value of the new node is greater than the root node.
-            }else-if (newNode.value > temp.value){
+            }else if (newNode.value > temp.value){
                 // If the spot is open then place the new node there and return true.
                 if(temp.right == null){
                     temp.right = newNode;
@@ -76,9 +76,9 @@ public class BinarySearchTree {
         while(temp != null){
             if(value < temp.value){ // When the value is less than the temp value.
                 temp = temp.left;
-            }else-if (value > temp.value){ // When the value is less than the temp value.
+            } else if (value > temp.value) { // When the value is less than the temp value.
                 temp = temp.right;
-            }else{ // When the value is equal to temp value.
+            } else{ // When the value is equal to temp value.
                 return true;
             }
         }

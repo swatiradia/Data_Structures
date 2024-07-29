@@ -1,8 +1,6 @@
 package stack.stackUsingArrayList;
 import java.util.ArrayList;
 
-import java.util.ArrayList;
-
 public class StackArrayList {
     private ArrayList<Integer> stackList = new ArrayList<>();
 
