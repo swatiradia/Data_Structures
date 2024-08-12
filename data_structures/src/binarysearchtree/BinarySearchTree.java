@@ -54,7 +54,7 @@ public class BinarySearchTree {
                     temp = temp.left;
                 }
             // When the value of the new node is greater than the root node.
-            }else if (newNode.value > temp.value){
+            }else if(newNode.value > temp.value){
                 // If the spot is open then place the new node there and return true.
                 if(temp.right == null){
                     temp.right = newNode;
@@ -64,13 +64,11 @@ public class BinarySearchTree {
                     temp = temp.right;
                 }
             }
-
         }
     }
     public boolean containsValue(int value){
-        // if its a empty tree then return false;
-        if (root == null) return false;
-
+        // if it's an empty tree then return false. (Not really needed)
+        // if (root == null) return false;
         Node temp = root;
 
         while(temp != null){
@@ -82,8 +80,7 @@ public class BinarySearchTree {
                 return true;
             }
         }
-        // When the value does not exist in the tree.
+        // When the value does not exist in the tree or the root itself is null.
         return false;
     }
-
 }
