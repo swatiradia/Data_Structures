@@ -1,86 +1,115 @@
 package data_structures.binarysearchtree;
 
+// Class representing a binary tree structure
 public class BinarySearchTree {
 
-    Node root; // root is set to null
-    class Node{
-        int value;
-        Node right;
-        Node left;
+    // Step 1: Define the root of the tree, initialized to null
+    Node root; // The root node of the binary tree
 
-        Node(int value){
+    // Inner class representing a node in the binary tree
+    class Node {
+        // Step 2: Value stored in the node
+        int value;
+
+        // Step 3: Pointers to the left and right child nodes
+        Node right; // Reference to the right child
+        Node left;  // Reference to the left child
+
+        // Constructor for creating a new node with a specified value
+        Node(int value) {
+            // Step 4: Assign the value to the node
             this.value = value;
+
+            // Step 5: Initialize left and right children to null by default
+            this.right = null;
+            this.left = null;
         }
     }
 
 //    Constructor for creating binary tree with root node.
-//    public BinarySearchTree(int value){
-//        Node newNode = new Node(value);
-//        root = newNode;
-//    }
+/*   public BinarySearchTree(int value){
+        Node newNode = new Node(value);
+        root = newNode;
+    } */
 
-//    Constructor for creating binary tree with no node. (Redundant)
-    public BinarySearchTree(){
+// Constructor to initialize the Binary Search Tree with no node. (Redundant)
+    public BinarySearchTree() {
+        // Step 1: Set the root to null, indicating an empty tree
         root = null;
     }
 
-    public Node getRoot(){
+    // Method to retrieve the root of the Binary Search Tree
+    public Node getRoot() {
+        // Step 2: Return the root node of the tree
         return root;
     }
 
-    public boolean insert(int value){
+    // Method to insert a new node with the given value into the Binary Search Tree
+    public boolean insert(int value) {
+        // Step 1: Create a new node with the given value
         Node newNode = new Node(value);
 
-        // When there are no nodes is the Binary Search Tree.
-        if(root == null){
+        // Step 2: If the tree is empty, set the root to the new node and return true
+        if (root == null) {
             root = newNode;
             return true;
         }
 
+        // Step 3: Start from the root node and traverse the tree to find the appropriate position
         Node temp = root;
 
-        while(true){
-            // When the value of the new node is same as the root node.
-            if(newNode.value == temp.value) return false;
+        while (true) {
+            // Step 4: If the new node's value is equal to the current node's value, return false (duplicate value)
+            if (newNode.value == temp.value) {
+                return false;
+            }
 
-            // When the value of the new node is less than the root node.
-            if(newNode.value < temp.value){
-                // If the spot is open then place the new node there and return true.
-                if(temp.left == null){
+            // Step 5: If the new node's value is less than the current node's value, go left
+            if (newNode.value < temp.value) {
+                // Step 6: If there's an open spot on the left, insert the new node there and return true
+                if (temp.left == null) {
                     temp.left = newNode;
                     return true;
-                // Go down there level to the left.
-                }else{
-                    temp = temp.left;
                 }
-            // When the value of the new node is greater than the root node.
-            }else if(newNode.value > temp.value){
-                // If the spot is open then place the new node there and return true.
-                if(temp.right == null){
+                // Step 7: If not, move down the tree to the left
+                temp = temp.left;
+
+                // Step 8: If the new node's value is greater than the current node's value, go right
+            } else {
+                // Step 9: If there's an open spot on the right, insert the new node there and return true
+                if (temp.right == null) {
                     temp.right = newNode;
                     return true;
-                // Go down there level to the right.
-                }else{
-                    temp = temp.right;
                 }
+                // Step 10: If not, move down the tree to the right
+                temp = temp.right;
             }
         }
     }
-    public boolean containsValue(int value){
-        // if it's an empty tree then return false. (Not really needed)
-        // if (root == null) return false;
+
+    // Method to check if a given value exists in the Binary Search Tree
+    public boolean containsValue(int value) {
+        // Step 1: Start at the root of the tree
         Node temp = root;
 
-        while(temp != null){
-            if(value < temp.value){ // When the value is less than the temp value.
+        // Step 2: Traverse the tree until the correct value is found or the tree ends
+        while (temp != null) {
+            // Step 3: If the value is less than the current node's value, go left
+            if (value < temp.value) {
                 temp = temp.left;
-            } else if (value > temp.value) { // When the value is less than the temp value.
+
+                // Step 4: If the value is greater than the current node's value, go right
+            } else if (value > temp.value) {
                 temp = temp.right;
-            } else{ // When the value is equal to temp value.
+
+                // Step 5: If the value matches the current node's value, return true
+            } else {
                 return true;
             }
         }
-        // When the value does not exist in the tree or the root itself is null.
+
+        // Step 6: If we reach a null node, the value doesn't exist in the tree
         return false;
     }
+
 }
