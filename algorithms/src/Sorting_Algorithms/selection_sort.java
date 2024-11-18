@@ -12,7 +12,6 @@ public class selection_sort {
 
     private static void selection_sort_minimum(int[] arr) {
         int minIndex = 0;
-        int temp =0;
 
         for (int i=0; i<arr.length-1;i++){
             minIndex=i;
@@ -20,7 +19,7 @@ public class selection_sort {
                 if (arr[minIndex] > arr[j])
                     minIndex = j;
             }
-                temp = arr[minIndex];
+                int temp = arr[minIndex];
                 arr[minIndex] = arr[i];
                 arr[i] = temp;
 

@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.Arrays;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class linear_search {
 
@@ -25,11 +26,13 @@ public class linear_search {
         // Initialize an array of integers
         int[] array = {6, 2, 10, 4, 1, 3, 0};
 
-        // Sort the array in ascending order
-        Arrays.sort(array);
+        // Sort the array in ascending order, not necessary !!
+//        Arrays.sort(array);
 
         // Define the target value to search for
-        int x = 4;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number to find ");
+        int x = input.nextInt();
 
         // Call the search method to find the index of the target value
         int result = search(array, array.length, x);

@@ -4,7 +4,7 @@ public class bubble_sort {
 
     public static void main(String[] args) {
         // Initialize an array of integers to be sorted
-        int[] arr = {66, 23, 1, 0, 4, 8, 9, 11};
+        int[] arr = {66, 23, 4, 8, 1, 0, 9, 11};
 
         // Call the bubble_sort method to sort the array
         bubble_sort(arr);
@@ -23,12 +23,12 @@ public class bubble_sort {
                 // Compare adjacent elements
                 if (arr[j] > arr[j + 1]) {
                     // Swap elements if they are in the wrong order
-                    arr[j] = arr[j] + arr[j + 1];
-                    arr[j + 1] = arr[j] - arr[j + 1];
-                    arr[j] = arr[j] - arr[j + 1];
+                    arr[j] = arr[j]+ arr[j+1];
+                    arr[j+1] = arr[j] -arr[j+1];
+                    arr[j] = arr[j]- arr[j+1];
                 }
             }
-            // Print the array after each pass to show the progress
+//          Print the array after each pass to show the progress
             for (int value : arr) {
                 System.out.print(value + " ");
             }
