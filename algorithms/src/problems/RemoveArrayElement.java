@@ -25,7 +25,7 @@ package problems;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class removeArrayElement {
+public class RemoveArrayElement {
 
     public static int removeElement(int [] nums, int val){
         // Initialize index j for writing elements in the array

@@ -13,10 +13,13 @@ public class merge_sort {
         int mid = arr.length / 2;
 
         // Recursively sort the left half of the array
+
         int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
+
 
         // Recursively sort the right half of the array
         int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
+
 
         // Merge the two sorted halves and return the sorted array
         return merge(left, right);
@@ -25,6 +28,7 @@ public class merge_sort {
     // Method to merge two sorted arrays into one sorted array
     private static int[] merge(int[] array1, int[] array2) {
         // Create an array to hold the combined elements
+
         int[] combined = new int[array1.length + array2.length];
 
         // Initialize indices for combined array and both input arrays

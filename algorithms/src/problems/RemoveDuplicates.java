@@ -2,7 +2,7 @@ package problems;
 
 import java.util.Arrays;
 
-public class removeDuplicates {
+public class RemoveDuplicates {
 
 
     // Method to remove duplicate elements from a sorted integer array

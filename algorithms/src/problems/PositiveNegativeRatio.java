@@ -22,7 +22,7 @@ Output : 0.500000
 
 package problems;
 
-public class positiveNegativeRatio {
+public class PositiveNegativeRatio {
 
     public static void positiveNegativeRatioSolution(int[] arr) {
         // Initialize counters for positive, negative, and zero numbers
